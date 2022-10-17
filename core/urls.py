@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from chat.views import *
 urlpatterns = [
+    path('',home),
+    path('students/',generate_student_data),
     path('admin/', admin.site.urls),
 ]

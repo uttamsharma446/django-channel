@@ -10,7 +10,8 @@ django.setup()
 
 
 ws_pattern=[
-    path('test/',consumers.TestConsumer.as_asgi())
+    path('test/',consumers.TestConsumer.as_asgi()),
+    path('newtest/',consumers.NewConsumer.as_asgi())
 ]
 application = ProtocolTypeRouter({
   "http": AsgiHandler(),
